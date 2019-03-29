@@ -1,0 +1,30 @@
+{
+  "name": "ynn-plugin-load-files",
+  "version": "0.0.0",
+  "description": "Loading files while initializing.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ynnjs/ynn-plugin-load-files.git"
+  },
+  "keywords": [
+    "ynn",
+    "plugin",
+    "load"
+  ],
+  "author": "LvChengbin <lvchengbin59@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ynnjs/ynn-plugin-load-files/issues"
+  },
+  "homepage": "https://github.com/ynnjs/ynn-plugin-load-files#readme",
+  "devDependencies": {
+    "jest": "^24.5.0",
+    "pre-commit": "^1.2.2",
+    "supertest": "^4.0.2",
+    "ynn": "0.0.45"
+  }
+}
