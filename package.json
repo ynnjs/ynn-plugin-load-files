@@ -4,7 +4,12 @@
   "description": "Loading files while initializing.",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest --forceExit"
+    "test": "jest --forceExit",
+    "tw": "npm run test-watch",
+    "test-watch": "jest --watch",
+    "test-cov": "jest --coverage --runInBand --forceExit --detectOpenHandles",
+    "lint": "eslint src --cache --ignore-path .eslintignore",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
   "repository": {
     "type": "git",
@@ -22,9 +27,24 @@
   },
   "homepage": "https://github.com/ynnjs/ynn-plugin-load-files#readme",
   "devDependencies": {
+    "eslint": "^5.15.3",
     "jest": "^24.5.0",
     "pre-commit": "^1.2.2",
     "supertest": "^4.0.2",
     "ynn": "0.0.45"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.spec.js"
+    ],
+    "coverageReporters": [
+      "text-summary",
+      "text",
+      "lcov"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "testEnvironment": "node"
   }
 }
